@@ -1,6 +1,6 @@
 import {Page} from "../components/page.tsx";
 import {Card} from "../components/ui/card.tsx";
-import {ArrowRight, CheckCircle2} from "lucide-react";
+import {CheckCircle2, ChevronRight} from "lucide-react";
 import type {JSX} from "react";
 import {SiJest, SiNextdotjs, SiPrisma, SiTailwindcss} from "react-icons/si";
 import {BiSolidShip} from "react-icons/bi";
@@ -75,7 +75,7 @@ export const CaseStudy = () => {
                 href={"https://wechange.me"}
             >
                 VISIT SITE
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
+                <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
             </a>
             <main className="flex flex-col gap-8">
                 <Card
