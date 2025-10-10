@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-hazard-yellow: #fbbf24;
+    --color-international-orange: #FF4F00;
+    --color-danger: oklch(57.7% 0.245 27.325);
+    --color-foreground: oklch(98.5% 0 0);
+    --color-background: oklch(14.5% 0 0);
+    --color-accent-foreground: oklch(92.2% 0 0);
+    --color-accent-background: oklch(26.9% 0 0);
+}

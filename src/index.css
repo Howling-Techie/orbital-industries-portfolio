@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@keyframes wipeTransitionIn {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes wipeTransitionOut {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+    90% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+.transition-wipe-in {
+    animation: wipeTransitionIn 700ms ease-in-out;
+}
+
+.transition-wipe-out {
+    animation: wipeTransitionOut 700ms ease-in-out;
+}
+
+@layer base {
+    body * {
+        @apply transition-colors duration-400;
+    }
+
+    body {
+        font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    }
+
+    .font-mono {
+        font-family: 'Roboto Mono', monospace;
+    }
+}
