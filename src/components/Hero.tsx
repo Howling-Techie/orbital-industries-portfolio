@@ -10,8 +10,13 @@ export function Hero() {
     const isLightMode = theme === "light";
     const [transitioning, setTransitioning] = useState(false);
     const [titleStatus, setTitleStatus] = useState(isLightMode ? 1 : -1);
+    const [firstRun, setFirstRun] = useState(true);
 
     useEffect(() => {
+        if (firstRun) {
+            setFirstRun(false);
+            return;
+        }
         setTransitioning(true);
         setTitleStatus(0);
         const wipeTimer = setTimeout(() => {
