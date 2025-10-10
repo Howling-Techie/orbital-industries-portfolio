@@ -8,5 +8,5 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
-    base: "/orbital-industries/",
+    base: "/orbital-industries-portfolio/",
 });
