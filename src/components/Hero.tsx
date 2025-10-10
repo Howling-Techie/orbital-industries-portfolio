@@ -81,7 +81,8 @@ export function Hero() {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4">
-                            <button
+                            <a
+                                href={"#contact"}
                                 className={cn(
                                     buttonVariants({variant: "primary"}),
                                     "group"
@@ -89,7 +90,7 @@ export function Hero() {
                             >
                                 Initialize Project
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
-                            </button>
+                            </a>
 
                             <a
                                 href={"#services"}
