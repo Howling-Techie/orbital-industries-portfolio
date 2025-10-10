@@ -10,7 +10,7 @@ import ScrollToAnchor from "./components/ScrollToAnchor.tsx";
 function App() {
     return (
         <ThemeProvider>
-            <BrowserRouter>
+            <BrowserRouter basename={"/orbital-industries-portfolio"}>
                 <div
                     className={`min-h-screen text-background dark:text-foreground overflow-hidden`}>
                     <main className="pt-20">
