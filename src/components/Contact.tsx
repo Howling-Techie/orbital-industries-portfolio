@@ -43,7 +43,6 @@ export function Contact() {
                             </label>
                             <Input name="name"
                                    required
-                                   className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                                    placeholder="Enter your name"
                             />
                         </div>
@@ -55,7 +54,6 @@ export function Contact() {
                                 type="email"
                                 name="email"
                                 required
-                                className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                                 placeholder="your@email.com"
                             />
                         </div>
@@ -68,7 +66,6 @@ export function Contact() {
                         <Input
                             name="title"
                             required
-                            className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                             placeholder="e.g. Full Stack Application"
                         />
                     </div>
@@ -80,7 +77,7 @@ export function Contact() {
                         <Textarea
                             name="message"
                             required
-                            className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow min-h-[150px]"
+                            className="min-h-[150px]"
                             placeholder="Describe your project..."
                         />
                     </div>
