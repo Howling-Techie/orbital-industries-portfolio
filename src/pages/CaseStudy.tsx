@@ -1,6 +1,6 @@
 import {Page} from "../components/page.tsx";
 import {Card} from "../components/ui/card.tsx";
-import {CheckCircle2, ChevronRight} from "lucide-react";
+import {CheckCircle2, ChevronLeft, ChevronRight} from "lucide-react";
 import type {JSX} from "react";
 import {SiJest, SiNextdotjs, SiPrisma, SiTailwindcss} from "react-icons/si";
 import {BiSolidShip} from "react-icons/bi";
@@ -8,6 +8,7 @@ import {RiWindow2Fill} from "react-icons/ri";
 import {FaPassport} from "react-icons/fa";
 import {buttonVariants} from "../components/ui/variants.ts";
 import {cn} from "../components/ui/utils.ts";
+import {NavLink} from "react-router";
 
 const description =
     `A full-stack web application built with Next.js and Nestjs that enables digital comic creators to sell their work through personal storefronts, while giving customers an easy-to-use purchasing and reading experience.`;
@@ -402,6 +403,29 @@ export const CaseStudy = () => {
                         </div>
                     </section>
                 </Card>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-20">
+                    <NavLink
+                        to={"/"}
+                        onClick={() => window.scrollTo(0, 0)}
+                        className={cn(
+                            buttonVariants({variant: "secondary"}),
+                            "group"
+                        )}
+                    >
+                        <ChevronLeft className="ml-2 w-4 h-4 group-hover:-translate-x-1 transition-transform"/>
+                        BACK TO ORBITAL INDUSTRIES
+                    </NavLink>
+                    <a
+                        className={cn(
+                            buttonVariants({variant: "primary"}),
+                            "group"
+                        )}
+                        href={"https://wechange.me"}
+                    >
+                        VISIT SITE
+                        <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
+                    </a>
+                </div>
             </main>
         </Page>
     );
