@@ -74,13 +74,13 @@ export function About() {
             <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <section>
                     <p>I'm solo full-stack developer specializing in modern web applications for small businesses.
-                        Founded
-                        in 2024, Orbital Industries is built on a foundation of quality code, attention to detail, and
-                        direct client collaboration.</p>
+                        Founded in 2024, Orbital Industries is built on a foundation of quality code, attention to
+                        detail, and direct client collaboration.</p>
                     <p>Working with local businesses and entrepreneurs, I craft custom solutions that prioritize clean
                         architecture, responsive design, and seamless user experiences. Every project receives dedicated
                         focus and personalized service.</p>
-                    <p>Whether you need a simple static website or a complex project with robust backend systems,
+                    <p>Whether you need a simple static website, a complex project with robust backend systems, or have
+                        an existing project that could use some support,
                         Orbital Industries are here to help bring your project to reality.</p>
                     <p>Alternatively, if you're looking to expand your team I'm always open to new opportunities!</p>
                     <div className="flex mt-8">
