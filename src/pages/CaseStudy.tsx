@@ -202,7 +202,7 @@ export const CaseStudy = () => {
                         <div className="flex flex-col gap-8">
                             <div>
                                 <h2 className="pb-2 text-xl">FRONT-END</h2>
-                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                                     {frontend.map((tech, index) => (
                                         <Card hover key={index}>
                                             <div
@@ -224,7 +224,7 @@ export const CaseStudy = () => {
                             </div>
                             <div>
                                 <h2 className="pb-2 text-xl">BACK-END</h2>
-                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                                     {backend.map((tech, index) => (
                                         <Card hover key={index}>
                                             <div

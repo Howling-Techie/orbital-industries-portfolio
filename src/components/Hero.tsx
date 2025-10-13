@@ -35,10 +35,16 @@ export function Hero() {
     return (
         <section className="relative py-20 overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
             {/* Corner Borders */}
-            <div className={cornerBorderVariants({position: "top-left", theme: isLightMode ? "light" : "dark"})}/>
-            <div className={cornerBorderVariants({position: "top-right", theme: isLightMode ? "light" : "dark"})}/>
-            <div className={cornerBorderVariants({position: "bottom-left", theme: isLightMode ? "light" : "dark"})}/>
-            <div className={cornerBorderVariants({position: "bottom-right", theme: isLightMode ? "light" : "dark"})}/>
+            <div className="hidden md:block">
+                <div className={cornerBorderVariants({position: "top-left", theme: isLightMode ? "light" : "dark"})}/>
+                <div className={cornerBorderVariants({position: "top-right", theme: isLightMode ? "light" : "dark"})}/>
+                <div
+                    className={cornerBorderVariants({position: "bottom-left", theme: isLightMode ? "light" : "dark"})}/>
+                <div className={cornerBorderVariants({
+                    position: "bottom-right",
+                    theme: isLightMode ? "light" : "dark"
+                })}/>
+            </div>
 
             <div className="container mx-auto px-6 md:px-12">
                 <div className="grid lg:grid-cols-1 gap-12 items-center">
