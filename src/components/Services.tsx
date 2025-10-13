@@ -7,7 +7,7 @@ const services = [
         id: "FS_001",
         icon: Layers,
         title: "Full-Stack Development",
-        description: "End-to-end web applications built with modern frameworks and best practices.",
+        description: "End-to-end desktop, mobile, and web applications built with modern frameworks and best practices.",
         status: "ACTIVE"
     },
     {
