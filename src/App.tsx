@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router";
 import {Home} from "./pages/Home.tsx";
 import {CaseStudy} from "./pages/CaseStudy.tsx";
 import ScrollToAnchor from "./components/ScrollToAnchor.tsx";
+import {Resume} from "./pages/Resume.tsx";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home/>}/>
                             <Route path="/case-study" element={<CaseStudy/>}/>
+                            <Route path="/resume" element={<Resume/>}/>
                         </Routes>
                     </main>
                 </div>
