@@ -38,21 +38,25 @@ export function Contact() {
                 <form className="space-y-6" onSubmit={sendEmail}>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow">
+                            <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow" htmlFor={"name"}>
                                 NAME
                             </label>
                             <Input name="name"
+                                   id="name"
                                    required
+                                   autoComplete="name"
                                    placeholder="Enter your name"
                             />
                         </div>
                         <div>
-                            <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow">
+                            <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow" htmlFor={"email"}>
                                 EMAIL
                             </label>
                             <Input
                                 type="email"
                                 name="email"
+                                id="email"
+                                autoComplete="email"
                                 required
                                 placeholder="your@email.com"
                             />
@@ -60,23 +64,26 @@ export function Contact() {
                     </div>
 
                     <div>
-                        <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow">
+                        <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow" htmlFor={"subject"}>
                             SUBJECT
                         </label>
                         <Input
-                            name="title"
+                            name="subject"
+                            id="subject"
                             required
                             placeholder="e.g. Full Stack Application"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow">
+                        <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow" htmlFor={"message"}>
                             MESSAGE
                         </label>
                         <Textarea
                             name="message"
                             required
+                            id="message"
+                            rows={4}
                             className="min-h-[150px]"
                             placeholder="Describe your project..."
                         />
@@ -115,17 +122,20 @@ export function Contact() {
                         <div className="flex gap-4">
                             <a
                                 href="https://github.com/Howling-Techie"
+                                aria-label={"Github"}
                                 className="w-10 h-10 border border-background hover:text-foreground dark:border-hazard-yellow/50 flex items-center justify-center hover:bg-background dark:hover:bg-hazard-yellow/50 dark:hover:border-hazard-yellow transition-colors"
                             >
                                 <GithubIcon className="w-5 h-5"/>
                             </a>
                             <a
+                                aria-label={"Linkedin"}
                                 href="https://www.linkedin.com/in/matthew-berry-68a718a8/"
                                 className="w-10 h-10 border border-background hover:text-foreground dark:border-hazard-yellow/50 flex items-center justify-center hover:bg-background dark:hover:bg-hazard-yellow/50 dark:hover:border-hazard-yellow transition-colors"
                             >
                                 <LinkedinIcon className="w-5 h-5"/>
                             </a>
                             <a
+                                aria-label={"Email"}
                                 href="mailto:contact@orbital.industries"
                                 className="w-10 h-10 border border-background hover:text-foreground dark:border-hazard-yellow/50 flex items-center justify-center hover:bg-background dark:hover:bg-hazard-yellow/50 dark:hover:border-hazard-yellow transition-colors"
                             >
