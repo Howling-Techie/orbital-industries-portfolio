@@ -26,7 +26,7 @@ export function Showcase() {
                         <AlertTriangle className="w-6 h-6 text-background dark:text-hazard-yellow"/>
                         <TechnicalBadge>CASE STUDY LOADED / DIGITAL COMICS PLATFORM</TechnicalBadge>
                     </div>
-                    <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                    <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                         WELCOME CHANGE
                     </h1>
                     <div

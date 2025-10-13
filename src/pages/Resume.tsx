@@ -169,7 +169,7 @@ export const Resume = () => {
                 <Card
                     className="lg:p-6">
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             SKILLS
                         </h1>
                         <div className="flex flex-col gap-8">
@@ -256,7 +256,7 @@ export const Resume = () => {
                                                 className="text-international-orange dark:text-hazard-yellow font-['Share_Tech_Mono'] mb-2">
                                                 {exp.duration}
                                             </div>
-                                            <h2 className="text-2xl md:text-3xl dark:font-['Orbitron'] dark:font-bold text-background dark:text-foreground">
+                                            <h2 className="text-2xl md:text-3xl dark:font-orbitron dark:font-bold text-background dark:text-foreground">
                                                 {exp.title}
                                             </h2>
                                         </div>
@@ -267,7 +267,7 @@ export const Resume = () => {
                                     {exp.icon}
                                 </div>
                             </div>
-                            <h1 className="text-xl lg:text-2xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                            <h1 className="text-xl lg:text-2xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                                 {exp.company}
                             </h1>
                             <div>

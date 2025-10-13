@@ -82,7 +82,7 @@ export const CaseStudy = () => {
                 <Card
                     className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:p-6">
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             Project Initialization
                         </h1>
                         <div>
@@ -174,7 +174,7 @@ export const CaseStudy = () => {
                 <Card
                     className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:p-6">
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             PLANNING STAGE
                         </h1>
                         <div>
@@ -196,7 +196,7 @@ export const CaseStudy = () => {
                 <Card
                     className="lg:p-6">
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             SYSTEM ARCHITECTURE
                         </h1>
                         <div className="flex flex-col gap-8">
@@ -250,7 +250,7 @@ export const CaseStudy = () => {
                 <Card
                     className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:p-6">
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             FEATURE HIGHLIGHT
                         </h1>
                         <div>
@@ -278,7 +278,7 @@ export const CaseStudy = () => {
                 </Card>
                 <Card>
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             OBSTACLE RESOLUTION
                         </h1>
                         <div>
@@ -312,7 +312,7 @@ export const CaseStudy = () => {
                 </Card>
                 <Card>
                     <section>
-                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-['Orbitron'] dark:font-bold text-international-orange dark:text-hazard-yellow">
+                        <h1 className="text-4xl lg:text-5xl uppercase my-4 dark:font-orbitron dark:font-bold text-international-orange dark:text-hazard-yellow">
                             PROJECT ANALYSIS
                         </h1>
                         <div>

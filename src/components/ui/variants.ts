@@ -46,7 +46,7 @@ export const titleVariants = cva("text-5xl sm:text-6xl md:text-8xl leading-none 
     variants: {
         mode: {
             light: "font-['Space Grotesk'] text-background",
-            dark: "font-['Orbitron'] font-black text-foreground",
+            dark: "font-orbitron font-black text-foreground",
         },
         status: {
             hidden: "hidden",

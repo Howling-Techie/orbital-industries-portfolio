@@ -10,4 +10,6 @@
     --color-background: oklch(14.5% 0 0);
     --color-accent-foreground: oklch(92.2% 0 0);
     --color-accent-background: oklch(26.9% 0 0);
+
+    --font-orbitron: 'Orbitron Variable', sans-serif;
 }

@@ -10,7 +10,7 @@ export const Heading = ({title, subtitle}: { title: string, subtitle?: string })
                             {subtitle}
                         </div>
                     }
-                    <h2 className="text-4xl md:text-5xl dark:font-['Orbitron'] dark:font-bold text-background dark:text-foreground">
+                    <h2 className="text-4xl md:text-5xl dark:font-orbitron dark:font-bold text-background dark:text-foreground">
                         {title}
                     </h2>
                 </div>
