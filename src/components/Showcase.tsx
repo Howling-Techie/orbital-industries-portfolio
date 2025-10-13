@@ -95,14 +95,26 @@ export function Showcase() {
                         <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
                     </NavLink>
                 </div>
-                <ImageCarousel images={[
-                    "assets/showcase/homepage.png",
-                    "assets/showcase/comic.png",
-                    "assets/showcase/artist.png",
-                    "assets/showcase/profile.png",
-                    "assets/showcase/comicUpload.png",
-                ]}
-                               height={850}/>
+                <div className="hidden lg:flex h-[900px]">
+                    <ImageCarousel swiping images={[
+                        "assets/showcase/homepage.png",
+                        "assets/showcase/comic.png",
+                        "assets/showcase/artist.png",
+                        "assets/showcase/profile.png",
+                        "assets/showcase/comicUpload.png",
+                    ]}
+                                   height={850}/>
+                </div>
+                <div className="flex lg:hidden h-[400px]">
+                    <ImageCarousel swiping images={[
+                        "assets/showcase/homepage.png",
+                        "assets/showcase/comic.png",
+                        "assets/showcase/artist.png",
+                        "assets/showcase/profile.png",
+                        "assets/showcase/comicUpload.png",
+                    ]}
+                                   height={350}/>
+                </div>
             </Card>
         </Page>
     );
