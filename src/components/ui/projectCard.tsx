@@ -18,8 +18,8 @@ export interface ProjectCardProps {
 
 export const ProjectCard = ({title, description, label, tags, link, images}: ProjectCardProps) => {
     return (
-        <Card
-            className="relative p-6 border-0 transition-all min-h-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:p-12"
+        <Card fullHeight
+              className="relative p-6 border-0 transition-all min-h-full flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:p-12"
         >
             <div className="flex flex-col text-background dark:text-foreground">
                 <div className="flex items-center gap-3">
@@ -30,7 +30,7 @@ export const ProjectCard = ({title, description, label, tags, link, images}: Pro
                 <div className="text-sm md:text-base">
                     {description}
                 </div>
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2 my-4">
                     {tags.map((tag, index) => (
                         <Tag
                             key={index} text={tag}/>))}

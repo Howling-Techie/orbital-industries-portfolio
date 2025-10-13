@@ -3,18 +3,19 @@ import * as React from "react";
 import {cn} from "./utils";
 import {DiagonalStripes} from "./diagonalStripes.tsx";
 
-export const Card = ({className = "", children, hover = false}: {
+export const Card = ({className = "", children, hover = false, fullHeight = false}: {
     className?: string,
     hover?: boolean,
+    fullHeight?: boolean,
     children: React.ReactNode
 }) => {
     return (
         <div
             data-slot="card"
             className={
-                `text-background dark:text-foreground flex flex-col gap-6 rounded-sm relative border-2 p-6 
+                `text-background dark:text-foreground flex flex-col gap-6 rounded-sm relative border-2 p-3 md:p-6 
                 border-background bg-foreground dark:bg-neutral-900 dark:border-hazard-yellow/20 
-                dark:hover:border-hazard-yellow/50 transition-all overflow-hidden ${hover ? "group/card" : ""}`}
+                dark:hover:border-hazard-yellow/50 transition-all overflow-hidden ${hover ? "group/card" : ""} ${fullHeight ? "h-full" : ""}`}
         >
             {hover &&
                 <DiagonalStripes className="opacity-0 group-hover/card:opacity-100 transition-opacity"/>}
