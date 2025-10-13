@@ -5,22 +5,45 @@ import {Card} from "./ui/card.tsx";
 import {cn} from "./ui/utils.ts";
 import {buttonVariants} from "./ui/variants.ts";
 import {Page} from "./page.tsx";
+import emailjs from "@emailjs/browser";
+import React, {useState} from "react";
 
 export function Contact() {
+    const [emailSent, setEmailSent] = useState(false);
+    const [responseMessage, setResponseMessage] = useState<string | null>(null);
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setEmailSent(true);
+        const form = e.currentTarget;
+        console.log(form);
+        emailjs
+            .sendForm("service_kfaxchr", "template_xrbeelo", form, {
+                publicKey: "sRNq1oZPTynwJlCeX",
+            })
+            .then(
+                () => {
+                    setResponseMessage("Email sent successfully!");
+                },
+                (error) => {
+                    setResponseMessage(`Failed to send email. Please try again later.\nError: ${error.text}`);
+                },
+            );
+    };
     return (
         <Page title={"GET IN TOUCH"} subtitle={"INIT_CONTACT"} id={"contact"}
               description={"Ready to build something extraordinary? Have an exiting opportunity? Let's connect."}>
 
             <Card className="w-full">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={sendEmail}>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
                             <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow">
                                 NAME
                             </label>
-                            <Input
-                                className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
-                                placeholder="Enter your name"
+                            <Input name={"name"}
+                                   className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
+                                   placeholder="Enter your name"
                             />
                         </div>
                         <div>
@@ -29,6 +52,7 @@ export function Contact() {
                             </label>
                             <Input
                                 type="email"
+                                name="email"
                                 className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                                 placeholder="your@email.com"
                             />
@@ -40,6 +64,7 @@ export function Contact() {
                             SUBJECT
                         </label>
                         <Input
+                            name="title"
                             className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                             placeholder="e.g. Full Stack Application"
                         />
@@ -50,6 +75,7 @@ export function Contact() {
                             MESSAGE
                         </label>
                         <Textarea
+                            name="message"
                             className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow min-h-[150px]"
                             placeholder="Describe your project..."
                         />
@@ -58,11 +84,17 @@ export function Contact() {
                     <button type="submit"
                             className={cn(
                                 buttonVariants({variant: "primary"}),
-                                "w-full"
-                            )}>
+                                "w-full cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 h-10 inline-flex items-center justify-center"
+                            )}
+                            disabled={emailSent}>
                         TRANSMIT MESSAGE
                         <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
                     </button>
+                    {responseMessage && (
+                        <div className="mt-4 text-sm text-international-orange dark:text-hazard-yellow">
+                            {responseMessage}
+                        </div>
+                    )}
                 </form>
 
                 <div className="pt-8">
@@ -81,19 +113,19 @@ export function Contact() {
 
                         <div className="flex gap-4">
                             <a
-                                href="#"
+                                href="https://github.com/Howling-Techie"
                                 className="w-10 h-10 border border-background hover:text-foreground dark:border-hazard-yellow/50 flex items-center justify-center hover:bg-background dark:hover:bg-hazard-yellow/50 dark:hover:border-hazard-yellow transition-colors"
                             >
                                 <GithubIcon className="w-5 h-5"/>
                             </a>
                             <a
-                                href="#"
+                                href="https://www.linkedin.com/in/matthew-berry-68a718a8/"
                                 className="w-10 h-10 border border-background hover:text-foreground dark:border-hazard-yellow/50 flex items-center justify-center hover:bg-background dark:hover:bg-hazard-yellow/50 dark:hover:border-hazard-yellow transition-colors"
                             >
                                 <LinkedinIcon className="w-5 h-5"/>
                             </a>
                             <a
-                                href="#"
+                                href="mailto:contact@orbital.industries"
                                 className="w-10 h-10 border border-background hover:text-foreground dark:border-hazard-yellow/50 flex items-center justify-center hover:bg-background dark:hover:bg-hazard-yellow/50 dark:hover:border-hazard-yellow transition-colors"
                             >
                                 <MailIcon className="w-5 h-5"/>
