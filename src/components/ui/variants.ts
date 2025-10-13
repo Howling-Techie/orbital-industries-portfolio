@@ -42,7 +42,7 @@ export const buttonVariants = cva(
     }
 );
 
-export const titleVariants = cva("text-6xl md:text-8xl leading-none tracking-tight w-2xl", {
+export const titleVariants = cva("text-5xl sm:text-6xl md:text-8xl leading-none tracking-tight md:w-2xl", {
     variants: {
         mode: {
             light: "font-['Space Grotesk'] text-background",

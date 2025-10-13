@@ -19,14 +19,17 @@ export interface ProjectCardProps {
 export const ProjectCard = ({title, description, label, tags, link, images}: ProjectCardProps) => {
     return (
         <Card
-            className="relative p-6 border-0 transition-all h-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:p-12"
+            className="relative p-6 border-0 transition-all min-h-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:p-12"
         >
             <div className="flex flex-col text-background dark:text-foreground">
                 <div className="flex items-center gap-3">
                     <AlertTriangle className="w-6 h-6 text-background dark:text-hazard-yellow"/>
                     <TechnicalBadge>{label}</TechnicalBadge>
                 </div>
-                <Title title={title} description={description}/>
+                <Title title={title}/>
+                <div className="text-sm md:text-base">
+                    {description}
+                </div>
                 <div className="flex flex-wrap gap-2 mb-8">
                     {tags.map((tag, index) => (
                         <Tag

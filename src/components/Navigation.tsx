@@ -60,7 +60,7 @@ export function Navigation() {
                             </NavLink>
                             <button
                                 onClick={() => setTheme(isLightMode ? "dark" : "light")}
-                                className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                                className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-mono dark:bg-white dark:text-black dark:hover:bg-gray-300"
                             >
                                 {isLightMode ? "Dark Mode" : "Light Mode"}
                             </button>

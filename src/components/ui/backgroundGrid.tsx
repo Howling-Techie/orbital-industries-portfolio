@@ -4,7 +4,7 @@ import {ThemeContext} from "../../context/ThemeContext.tsx";
 export function BackgroundGrid() {
     const {theme} = useContext(ThemeContext);
     const isLightMode = theme === "light";
-    const color = isLightMode ? "#000000" : "#ffd700";
+    const color = isLightMode ? "#8a8a8a" : "#ffd700";
     return (
         <div
             className="fixed inset-0 bg-foreground dark:bg-background">

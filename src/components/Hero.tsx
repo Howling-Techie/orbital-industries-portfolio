@@ -44,7 +44,7 @@ export function Hero() {
                 <div className="grid lg:grid-cols-1 gap-12 items-center">
                     <div className="space-y-8">
                         {/* Warning badge */}
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 overflow-visible">
                             <AlertTriangle className="w-6 h-6 text-background dark:text-hazard-yellow"/>
                             <TechnicalBadge>SYSTEM ONLINE / FULL-STACK ENGINEERING</TechnicalBadge>
                         </div>
