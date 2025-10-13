@@ -49,6 +49,9 @@ export const ProjectCard = ({title, description, label, tags, link, images}: Pro
             <div className="hidden lg:block h-[500px]">
                 <ImageCarousel images={images} height={500} swiping/>
             </div>
+            <div className="block lg:hidden">
+                <ImageCarousel images={images} height={500} compact swiping/>
+            </div>
         </Card>
     );
 };
