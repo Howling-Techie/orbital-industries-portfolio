@@ -41,7 +41,8 @@ export function Contact() {
                             <label className="block text-sm mb-2 font-mono dark:text-hazard-yellow">
                                 NAME
                             </label>
-                            <Input name={"name"}
+                            <Input name="name"
+                                   required
                                    className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                                    placeholder="Enter your name"
                             />
@@ -53,6 +54,7 @@ export function Contact() {
                             <Input
                                 type="email"
                                 name="email"
+                                required
                                 className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                                 placeholder="your@email.com"
                             />
@@ -65,6 +67,7 @@ export function Contact() {
                         </label>
                         <Input
                             name="title"
+                            required
                             className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow"
                             placeholder="e.g. Full Stack Application"
                         />
@@ -76,6 +79,7 @@ export function Contact() {
                         </label>
                         <Textarea
                             name="message"
+                            required
                             className="border-background dark:bg-background/50 dark:border-hazard-yellow/20 focus:ring-international-orange dark:focus:ring-hazard-yellow min-h-[150px]"
                             placeholder="Describe your project..."
                         />
