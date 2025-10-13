@@ -1,6 +1,7 @@
 import {Layers, Database, Smartphone, Zap, Cloud, Terminal} from "lucide-react";
 import {Card} from "./ui/card.tsx";
 import {Page} from "./page.tsx";
+import {Tag} from "./ui/tag.tsx";
 
 const services = [
     {
@@ -60,14 +61,12 @@ export function Services() {
                     <Card key={index} hover>
                         <div>
                             <div className="flex items-start justify-between mb-4">
-                                <div className="text-international-orange dark:text-hazard-yellow">
-                                    <service.icon
-                                        className="h-8 w-8 dark:group-hover:text-foreground group-hover:text-background transition-colors"/>
-                                </div>
                                 <div
-                                    className="font-mono text-xs text-background dark:text-hazard-yellow border border-background dark:border-hazard-yellow/30 px-2 py-1">
-                                    {service.id}
+                                    className="text-international-orange dark:text-hazard-yellow dark:group-hover/card:text-foreground group-hover/card:text-background">
+                                    <service.icon
+                                        className="h-8 w-8"/>
                                 </div>
+                                <Tag text={service.id}/>
                             </div>
 
                             <h3 className="text-xl mb-3 text-background dark:text-foreground uppercase">
