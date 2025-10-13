@@ -16,11 +16,13 @@ export const Page = ({title, id, subtitle, description, children}: PageProps) =>
             <div
                 className="absolute bottom-0 left-0 w-full h-32 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(0,0,0,0.02)_20px,rgba(0,0,0,0.02)_40px)]"/>
             <section id={id}
-                     className="py-16 pt-32 flex flex-col space-y-12 justify-center mx-auto px-6 container">
+                     className="py-16 pt-32 flex flex-col space-y-12 justify-center mx-auto px-3 md:px-6 container">
                 <Heading title={title} subtitle={subtitle}/>
-                <div className="max-w-4xl text-xl text-accent-background dark:text-accent-foreground leading-relaxed">
+                {description && <div
+                    className="max-w-4xl text-xl text-accent-background dark:text-accent-foreground leading-relaxed">
                     {description}
                 </div>
+                }
                 {children}
             </section>
         </section>
