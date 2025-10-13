@@ -47,7 +47,7 @@ export const ProjectCard = ({title, description, label, tags, link, images}: Pro
                 </a>}
             </div>
             <div className="hidden lg:block h-[500px]">
-                <ImageCarousel images={images} height={500}/>
+                <ImageCarousel images={images} height={500} swiping/>
             </div>
         </Card>
     );

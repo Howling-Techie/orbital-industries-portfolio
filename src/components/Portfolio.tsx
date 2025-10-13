@@ -65,6 +65,7 @@ export function Portfolio() {
                                 height: "100%",
                             },
                         }}
+                        controller={{disableSwipeNavigation: true}}
                         styles={{
                             container: {backgroundColor: "transparent"},
                             slide: {padding: 0, height: "100%"},
