@@ -1,7 +1,9 @@
-import {Layers, Database, Smartphone, Zap, Cloud, Terminal} from "lucide-react";
+import {Layers, Database, Smartphone, Zap, Cloud, Terminal, ChevronRight} from "lucide-react";
 import {Card} from "./ui/card.tsx";
 import {Page} from "./page.tsx";
 import {Tag} from "./ui/tag.tsx";
+import {NavLink} from "react-router";
+import {buttonVariants} from "./ui/variants.ts";
 
 const services = [
     {
@@ -78,6 +80,17 @@ export function Services() {
                         </div>
                     </Card>
                 ))}
+            </div>
+            <div className="flex justify-end mb-18">
+                <NavLink
+                    to={"/portfolio-example"}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className={
+                        buttonVariants({variant: "secondary"})}
+                >
+                    EXAMPLE ARTIST PORTFOLIO
+                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
+                </NavLink>
             </div>
         </Page>
     );

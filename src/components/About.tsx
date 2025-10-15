@@ -17,7 +17,8 @@ const techStack = [
     "JavaScript",
     "Electron",
     "Jest",
-    "React Native"
+    "Astro",
+    "React Native",
 ];
 
 const frontend = [
