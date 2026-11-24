@@ -8,16 +8,23 @@ import {CaseStudy} from "./pages/CaseStudy.tsx";
 import ScrollToAnchor from "./components/ScrollToAnchor.tsx";
 import {Resume} from "./pages/Resume.tsx";
 import {PortfolioDemo} from "./pages/PortfolioDemo.tsx";
+import {NewsDemo} from "./pages/NewsDemo.tsx";
+import {NewsPostDemo} from "./pages/NewsPostDemo.tsx";
+import {NewsHeader} from "./components/newsDemo/NewsHeader.tsx";
 
 function App() {
     return (
         <ThemeProvider>
-            <BrowserRouter basename={"/orbital-industries-portfolio/"}>
+            <BrowserRouter>
                 <div
-                    className={`min-h-screen text-background dark:text-foreground overflow-hidden`}>
+                    className={`text-background dark:text-foreground`}>
                     <ScrollToAnchor/>
                     <Routes>
                         <Route path="/portfolio-example" element={<PortfolioDemo/>}/>
+                        <Route path="/news-example" element={<NewsHeader/>}>
+                            <Route path="/news-example" element={<NewsDemo/>}/>
+                            <Route path="/news-example/:slug" element={<NewsPostDemo/>}/>
+                        </Route>
                         <Route path="/" element={
                             <>
                                 <BackgroundGrid/>

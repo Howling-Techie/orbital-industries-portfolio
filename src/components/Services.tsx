@@ -81,7 +81,16 @@ export function Services() {
                     </Card>
                 ))}
             </div>
-            <div className="flex justify-end mb-18">
+            <div className="flex flex-wrap justify-end mb-18 gap-6">
+                <NavLink
+                    to={"/news-example"}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className={
+                        buttonVariants({variant: "secondary"})}
+                >
+                    EXAMPLE NEWS/BLOG DESIGN
+                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
+                </NavLink>
                 <NavLink
                     to={"/portfolio-example"}
                     onClick={() => window.scrollTo(0, 0)}

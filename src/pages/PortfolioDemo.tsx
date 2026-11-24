@@ -8,6 +8,7 @@ import {AboutMe} from "../components/portfolioDemo/AboutMe.tsx";
 import {SocialLinks} from "../components/portfolioDemo/SocialLinks.tsx";
 import {ContactForm} from "../components/portfolioDemo/ContactForm.tsx";
 import {NavLink} from "react-router";
+import {Project} from "../components/portfolioDemo/Project.tsx";
 
 const features: {
     title: string,
@@ -18,14 +19,14 @@ const features: {
 }[] = [
     {
         title: "Gallery",
-        description: "Present your work in a beautiful gallery, including a feature image and a caption.",
+        description: "Present your work in a beautiful gallery, including featured images and captions.",
         icon: <RiGalleryLine className="text-cyan-400 text-2xl"/>,
         caption: "Photo by Matheus Viana: https://www.pexels.com/photo/woman-looking-at-paintings-2372979/",
         image: "assets/demo/gallery.jpg",
     },
     {
         title: "Contact Form",
-        description: "Allow users to send you a message through a contact form for fast and easy communication.",
+        description: "Allow users to send you messages through a contact form for fast and easy communication.",
         icon: <RiContactsBookLine className="text-fuchsia-400 text-2xl"/>,
         caption: "Photo by Suzy Hazelwood: https://www.pexels.com/photo/shallow-focus-of-letter-paper-1157151/",
         image: "assets/demo/contact.jpg",
@@ -104,15 +105,11 @@ export const PortfolioDemo = () => {
             </div>
             <div className="relative z-20">
                 <section className="relative container mx-auto p-16 flex flex-col items-center justify-center">
-                    <button onClick={() => setCommsOpen(!commsOpen)}
-                            className={`${commsOpen ? "text-rose-500 bg-rose-100 hover:bg-rose-400 hover:text-white cursor-pointer" : "text-rose-700/50 bg-rose-300/20 cursor-not-allowed hover:text-rose-900/50 hover:bg-rose-500/20"} rounded-full px-4 py-2 flex items-center gap-2 transition-colors duration-300 ease-in-out`}>
-                        <BsPencil/> Commissions Are {commsOpen ? "Open" : "Closed"}
-                    </button>
                     <h1 className="text-5xl md:text-7xl py-8 bg-gradient-to-r from-rose-300 to-cyan-300 text-transparent bg-clip-text text-center">
-                        Portfolio Example
+                        Orbital Portfolios
                     </h1>
                     <p className="text-xl text-neutral-600 text-center">
-                        This is an example of a basic portfolio we could build for you
+                        Looking for a portfolio to showcase your work? Get in touch and we'll get started!
                     </p>
                     <NavLink
                         to={"/"}
@@ -125,7 +122,7 @@ export const PortfolioDemo = () => {
                             flex items-center justify-center gap-2
                         `}
                     >
-                        Back to Orbital Industries
+                        Visit Orbital Industries
                     </NavLink>
                 </section>
                 <section className="relative container mx-auto p-16 pt-4 flex flex-col items-center justify-center">
@@ -156,22 +153,47 @@ export const PortfolioDemo = () => {
                 </section>
 
                 <section className="relative container mx-auto p-16 flex flex-col items-center justify-center">
-                    <div className="flex items-center gap-2 text-4xl mb-8">
-                        Gallery Example
+                    <div className="flex items-center gap-2 text-4xl mb-4">
+                        Interactive Galleries
                     </div>
+                    <p className="mb-4 text-xl text-neutral-600 text-center">Includes filtering and selecting images to
+                        view custom previews.</p>
                     <Gallery images={galleryImages} tags={galleryTags}/>
                 </section>
 
-                <section className="relative container mx-auto p-16 flex flex-col items-center justify-center">
+                <Project
+                    mainImage="assets/demo/cms.jpg"
+                    title="Dedicated Project Pages"
+                    subtitle="For larger works"
+                    description="Have pieces that you want to give room to breath? Give them the spotlight they deserve with a dedicated section, or even a whole page. Whatever the width and depth of your work, we'll find the best way to present them."
+                    tags={["Featured", "Portfolio Pieces", "Eye Catching", "Custom Designs"]}
+                    image1="assets/demo/cms.jpg"
+                />
+
+                <section className="relative container mx-auto p-16 pb-8 flex flex-col items-center justify-center">
+                    <div className="text-xl text-neutral-600 text-center mb-4">
+                        Whatever sections you need to tell the world what you can do, we can build it.
+                    </div>
                     <AboutMe/>
                 </section>
 
                 <section className="relative container mx-auto p-8 flex flex-col items-center justify-center">
                     <SocialLinks/>
                 </section>
+                <div
+                    className="text-neutral-600 text-center mt-4 flex flex-col items-center justify-center gap-8">
+                    <p className="text-xl "> Or more specialized elements:</p>
+                    <button onClick={() => setCommsOpen(!commsOpen)}
+                            className={`${commsOpen ? "text-rose-500 bg-rose-100 hover:bg-rose-400 hover:text-white cursor-pointer" : "text-rose-700/50 bg-rose-300/20 cursor-not-allowed hover:text-rose-900/50 hover:bg-rose-500/20"} rounded-full px-4 py-2 flex items-center gap-2 transition-colors duration-300 ease-in-out`}>
+                        <BsPencil/> Commissions Are {commsOpen ? "Open" : "Closed"}
+                    </button>
+                </div>
 
                 <section className="relative container mx-auto p-8 flex flex-col items-center justify-center">
                     <ContactForm/>
+                    <p className="text-xl text-neutral-600 text-center pt-16">
+                        Have a question or want to discuss a project? Visit Orbital Industries and get in touch!
+                    </p>
                     <NavLink
                         to={"/"}
                         onClick={() => window.scrollTo({behavior: "smooth", top: 0})}
@@ -180,18 +202,18 @@ export const PortfolioDemo = () => {
                             bg-gradient-to-r from-orange-400 to-orange-600
                             hover:from-orange-600 hover:to-orange-800
                             focus:ring-4 focus:ring-orange-300
-                            transition-colors duration-300 mt-16 w-full max-w-3xl
+                            transition-colors duration-300 mt-8 w-full max-w-3xl
                             flex items-center justify-center gap-2
                         `}
                     >
-                        Back to Orbital Industries
+                        Orbital Industries
                     </NavLink>
                 </section>
 
                 {/* Footer */}
                 <footer
                     className="relative container mx-auto px-16 py-8 text-center text-neutral-500 border-t border-neutral-200">
-                    <p>2025 Portfolio Demo. Built by Orbital Industries</p>
+                    <p>Built by Orbital Industries</p>
                 </footer>
             </div>
         </main>

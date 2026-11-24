@@ -51,28 +51,8 @@ export const SocialLinks = () => {
             className="flex flex-col items-center gap-6"
         >
             <h3 className="text-4xl text-neutral-800">
-                Social Media Links
+                Social Media Links both Big...
             </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-                {socialLinks.map((social) => (
-                    <motion.div
-                        key={social.name}
-                        initial={{opacity: 0, scale: 0.5}}
-                        whileInView={{opacity: 1, scale: 1}}
-                        viewport={{once: true}}
-                        transition={{duration: 0.3}}
-                        whileHover={{scale: 1.1, y: -5}}
-                        whileTap={{scale: 0.95}}
-                        className={`
-                            bg-white text-neutral-700 p-4 rounded-full shadow-lg
-                            transition-colors duration-300 cursor-pointer
-                            ${social.color} hover:text-white
-                        `}
-                    >
-                        {social.icon}
-                    </motion.div>
-                ))}
-            </div>
             <div className="grid grid-cols-3 lg:grid-cols-6 justify-center gap-4">
                 {socialLinks.map((social) => (
                     <motion.div
@@ -91,6 +71,27 @@ export const SocialLinks = () => {
                     >
                         {social.icon}
                         <p>{social.name}</p>
+                    </motion.div>
+                ))}
+            </div>
+            <p>...and small.</p>
+            <div className="flex flex-wrap justify-center gap-4">
+                {socialLinks.map((social) => (
+                    <motion.div
+                        key={social.name}
+                        initial={{opacity: 0, scale: 0.5}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.3}}
+                        whileHover={{scale: 1.1, y: -5}}
+                        whileTap={{scale: 0.95}}
+                        className={`
+                            bg-white text-neutral-700 p-4 rounded-full shadow-lg
+                            transition-colors duration-300 cursor-pointer
+                            ${social.color} hover:text-white
+                        `}
+                    >
+                        {social.icon}
                     </motion.div>
                 ))}
             </div>

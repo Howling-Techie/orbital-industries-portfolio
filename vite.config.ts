@@ -10,5 +10,10 @@ export default defineConfig({
         tailwindcss(),
         chunkSplitPlugin({strategy: "unbundle"})
     ],
-    base: "/orbital-industries-portfolio/",
+    server: {
+        allowedHosts: ["hechie.com", "orbital.industries"]
+    },
+    preview: {
+        allowedHosts: ["hechie.com", "orbital.industries"]
+    }
 });

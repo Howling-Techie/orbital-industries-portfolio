@@ -46,7 +46,7 @@ export const ContactForm = () => {
         >
             <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-neutral-800 mb-3">
-                    Get In Touch
+                    Even Custom Contact Forms
                 </h2>
                 <p className="text-neutral-600">
                     This is an example contact form. You can replace it with your own form or integrate with a

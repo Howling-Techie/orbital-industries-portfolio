@@ -24,6 +24,10 @@ export const Gallery = ({images, tags}: GalleryProps) => {
         ? images
         : images.filter(img => img.tags.includes(selectedTag));
 
+    const otherImageFilenames = Array.from({length: 4}, (_, i) => `/assets/news/${i + 6}.jpg`);
+    const projectImageFilenames = images.map(img => img.src);
+    const imageFilenames = [projectImageFilenames[0], projectImageFilenames[1], projectImageFilenames[2], ...otherImageFilenames, projectImageFilenames[3]];
+
     return (
         <div className="w-full">
             {/* Filter Tags */}
@@ -87,6 +91,25 @@ export const Gallery = ({images, tags}: GalleryProps) => {
                     </motion.div>
                 ))}
             </motion.div>
+            <div className="flex items-center gap-2 text-4xl mb-8 justify-center pt-12">
+                Elegant Masonry Style Galleries
+            </div>
+            <motion.div
+                initial={{opacity: 0, y: 20}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{duration: 0.5}}
+                className="p-5 sm:p-8">
+                <div
+                    className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 space-y-5 sm:space-y-8">
+                    {imageFilenames.map((image, index) => (
+                        <div key={index} className="relative">
+                            <img src={image} alt={`Gallery Image ${index + 1}`}
+                                 className="w-full h-full object-cover rounded-xl shadow-lg"/>
+                        </div>
+                    ))}
+                </div>
+            </motion.div>
 
             <AnimatePresence>
                 {selectedImage && (
@@ -102,7 +125,7 @@ export const Gallery = ({images, tags}: GalleryProps) => {
                             initial={{opacity: 0, scale: 0.9}}
                             animate={{opacity: 1, scale: 1}}
                             exit={{opacity: 0, scale: 0.9}}
-                            transition={{type: "spring", duration: 0.5}}
+                            transition={{duration: 0.2}}
                             className="fixed inset-4 md:inset-8 lg:inset-16 z-50 flex items-center justify-center"
                         >
                             <div

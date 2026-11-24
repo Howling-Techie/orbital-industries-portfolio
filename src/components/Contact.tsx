@@ -19,7 +19,7 @@ export function Contact() {
         console.log(form);
         emailjs
             .sendForm("service_kfaxchr", "template_xrbeelo", form, {
-                publicKey: "sRNq1oZPTynwJlCeX",
+                publicKey: "sRNq1oZPTynwJlCeX", blockHeadless: true
             })
             .then(
                 () => {

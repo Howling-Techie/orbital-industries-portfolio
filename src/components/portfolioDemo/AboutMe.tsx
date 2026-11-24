@@ -22,7 +22,7 @@ export const AboutMe = () => {
                 {/* About Content */}
                 <div className="flex-1">
                     <h2 className="text-3xl font-bold text-neutral-800 mb-4">
-                        About Me
+                        From "About Me" Sections
                     </h2>
                     <div className="space-y-4 text-neutral-600 leading-relaxed">
                         <p>
